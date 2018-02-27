@@ -12,7 +12,7 @@ import { PostService } from '../post.service';
 })
 
 export class PostDetailComponent implements OnInit {
-  postId: number;
+  postId: string;
   postToDisplay: Post;
 
   constructor(private route:
@@ -23,7 +23,7 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.postId = parseInt(urlParameters['id']);
+      this.postId = urlParameters['id'];
     });
     this.postToDisplay = this.postService.getPostById(this.postId);
   }

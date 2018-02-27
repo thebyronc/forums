@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Post</h3>
+  </div>
+  <div class="panel-body">
+    <label>Post Title:</label>
+    <br>
+    <input #newTitle>
+  </div>
+  <div>
+    <label>Post:</label>
+    <br>
+    <textarea #newBody></textarea>
+  </div>
+  <button (click)="submitForm(newTitle.value, newBody.value);newTitle.value='';newBody.value=''">Post</button>
+</div>

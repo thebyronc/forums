@@ -1,5 +1,6 @@
-<h2>This post has id number: {{postId}}</h2>
+
 <div>
-  <p>{{postToDisplay.title}}</p>
-  <p>{{postToDisplay.body}}</p>
+  <h3>{{(postToDisplay | async)?.title}}</h3>
+  <p>{{(postToDisplay | async)?.body}}</p>
+  <p>This post has id number: {{postId}}</p>
 </div>
